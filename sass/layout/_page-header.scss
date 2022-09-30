@@ -1,0 +1,73 @@
+.header {
+  border-bottom: 1px solid var(--grey-color-second);
+
+  .header-container {
+    height: 80px;
+    @include flex(false, center);
+  }
+
+  .page-nav {
+    @include flex(false, center);
+  }
+
+  .menu {
+    @include flex(false, center);
+    column-gap: 50px;
+    margin-left: 93px;
+  }
+
+  .menu__link {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    transition: color var(--time-and-cubic);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  .current {
+    color: var(--accent-color);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+    }
+  }
+
+  .contact {
+    @include flex(false, center);
+    column-gap: 50px;
+    margin-left: auto;
+  }
+
+  .contact__link {
+    padding: 1px;
+    @include flex(false, center);
+    column-gap: 10px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    transition: color var(--time-and-cubic);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.contact__icon {
+  fill: currentColor;
+}
