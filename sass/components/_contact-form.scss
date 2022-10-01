@@ -8,7 +8,7 @@
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--title-text-color);
 }
@@ -96,6 +96,7 @@
 .contact-form__check-field {
   margin-bottom: 30px;
   @include flex(center, center);
+  font-size: 12px;
 }
 
 .contact-form__check {
@@ -108,7 +109,6 @@
   width: 16px;
   height: 15px;
   margin-right: 8.38px;
-  margin-left: 12px;
   cursor: pointer;
 }
 
@@ -147,4 +147,10 @@
 .contact-form__btn {
   padding-left: 52px;
   padding-right: 52px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form__check-field {
+    font-size: 14px;
+  }
 }

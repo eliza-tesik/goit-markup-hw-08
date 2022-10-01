@@ -3,7 +3,14 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
   color: var(--accent-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .social__subtitle {
+    text-align: left;
+  }
 }
 
 .social__list {
@@ -25,7 +32,7 @@
   background-color: var(--icons-background);
   border-radius: 50%;
   transition: background-color var(--time-and-cubic);
-  
+
   &:hover,
   &:focus {
     background-color: var(--accent-color);
@@ -38,8 +45,8 @@
   fill: currentColor;
 }
 
-
-
-.social {
-  margin-right: auto;
+@media screen and (min-width: 1200px) {
+  .social {
+    margin-right: auto;
+  }
 }

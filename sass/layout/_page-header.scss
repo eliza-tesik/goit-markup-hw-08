@@ -1,9 +1,47 @@
-.header {
-  border-bottom: 1px solid var(--grey-color-second);
-
+@media screen and (max-width: 767px) {
   .header-container {
-    height: 80px;
-    @include flex(false, center);
+    @include flex(space-between, center);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .mobile-menu-btn__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .header {
+    border-bottom: 1px solid var(--grey-color-second);
+
+    .header-container {
+      height: 80px;
+      @include flex(space-between, center);
+    }
   }
 
   .page-nav {
@@ -13,7 +51,7 @@
   .menu {
     @include flex(false, center);
     column-gap: 50px;
-    margin-left: 93px;
+    margin-left: 87px;
   }
 
   .menu__link {
@@ -46,17 +84,16 @@
   }
 
   .contact {
-    @include flex(false, center);
-    column-gap: 50px;
-    margin-left: auto;
+    @include flex(false, false, column);
+    row-gap: 10px;
   }
-
   .contact__link {
     padding: 1px;
     @include flex(false, center);
-    column-gap: 10px;
+    column-gap: 8px;
+    font-size: 12px;
     font-weight: 500;
-    line-height: 1.14;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
     transition: color var(--time-and-cubic);
@@ -66,8 +103,36 @@
       color: var(--accent-color);
     }
   }
+
+  .icon-envelope {
+    width: 14px;
+    height: 10px;
+  }
+
+  .icon-smartphone {
+    width: 10px;
+    height: 14px;
+  }
+
+  .contact__icon {
+    fill: currentColor;
+  }
 }
 
-.contact__icon {
-  fill: currentColor;
+@media screen and (min-width: 1200px) {
+  .menu {
+    margin-left: 92px;
+  }
+
+  .contact {
+    @include flex(false, center, row);
+    column-gap: 30px;
+    // margin-left: auto;
+  }
+
+  .contact__link {
+    column-gap: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
