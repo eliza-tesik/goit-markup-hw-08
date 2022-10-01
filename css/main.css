@@ -886,6 +886,10 @@ body {
   position: relative;
 }
 
+.specialty__img {
+  width: 370px;
+}
+
 .specialty__description {
   position: absolute;
   left: 0;
