@@ -20,10 +20,12 @@
 }
 
 .mobile-menu__container {
+  height: 100%;
   position: relative;
   padding-left: 25px;
   padding-top: 48px;
   padding-bottom: 48px;
+  @include flex(false, false, column);
 }
 
 .mobile-menu__close {
@@ -49,7 +51,7 @@
 }
 
 .mobile-menu__menu {
-  margin-bottom: 302px;
+  margin-bottom: auto;
 }
 
 .mobile-menu__link {
@@ -83,7 +85,7 @@
 }
 
 .mobile-menu__contact-tel-link {
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
@@ -105,10 +107,11 @@
 
 .mobile-menu__social-list {
   @include flex(false, center);
+  flex-wrap: wrap;
 }
 
 .mobile-menu__social-link {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.02em;

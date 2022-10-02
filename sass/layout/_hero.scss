@@ -1,6 +1,6 @@
 .hero {
   height: 400px;
-  width: 480px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -21,12 +21,17 @@
   screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
-    background-image: url('../images/hero-mobile@2x.jpg');
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero-mobile@2x.jpg');
   }
 }
 
 .hero__title {
-  width: 360px;
+  width: 300px;
   margin: 0 auto 30px auto;
   font-weight: 900;
   font-size: 26px;
@@ -40,7 +45,7 @@
 @media screen and (min-width: 768px) {
   .hero {
     height: 400px;
-    width: 768px;
+    max-width: 768px;
     background-image: linear-gradient(
         to top,
         rgba(47, 48, 58, 0.4),
@@ -48,20 +53,28 @@
       ),
       url('../images/hero-tablet.jpg');
   }
+  .hero__title {
+    width: 360px;
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
   screen and (min-resolution: 192dpi) and (min-width: 768px),
   screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    background-image: url('../images/hero-tablet@2x.jpg');
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero-tablet@2x.jpg');
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
     height: 600px;
-    width: 1200px;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(
@@ -83,6 +96,10 @@
   screen and (min-resolution: 192dpi) and (min-width: 1200px),
   screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
-    background-image: url('../images/hero-desktop@2x.jpg');
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ), url('../images/hero-desktop@2x.jpg');
   }
 }
