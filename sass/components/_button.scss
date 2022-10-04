@@ -1,26 +1,25 @@
+.btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--accent-text-color);
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  border: none;
+  transition: background-color var(--time-and-cubic);
 
-  .btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 24px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+  &:hover,
+  &:focus {
     color: var(--accent-text-color);
-    border-radius: 4px;
-    background-color: var(--accent-color);
+    background-color: #188ce8;
     border: none;
-    transition: background-color var(--time-and-cubic);
-
-    &:hover,
-    &:focus {
-      color: var(--accent-text-color);
-      background-color: #188ce8;
-      border: none;
-    }
   }
+}
 
 @media screen and (min-width: 1200px) {
   .btn {
